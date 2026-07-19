@@ -1,6 +1,8 @@
 import { supabaseAdmin } from "@/lib/supabase";
 import { uploadImage } from "@/lib/r2";
 
+export const runtime = 'edge';
+
 export async function GET() {
   const db = supabaseAdmin();
   const { data, error } = await db

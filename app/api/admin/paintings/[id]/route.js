@@ -1,6 +1,8 @@
 import { supabaseAdmin } from "@/lib/supabase";
 import { deleteImage } from "@/lib/r2";
 
+export const runtime = 'edge';
+
 export async function PATCH(request, { params }) {
   const updates = await request.json();
   const db = supabaseAdmin();
