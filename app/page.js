@@ -1,24 +1,23 @@
 import Link from "next/link";
+import CollageHero from "@/components/CollageHero";
 
 export default function HomePage() {
   return (
     <main>
-      {/* HERO — full-bleed image, name, title, two doors */}
-      <section
-        style={{
-          position: "relative",
-          minHeight: "88vh",
-          display: "flex",
-          alignItems: "flex-end",
-          backgroundImage:
-            "linear-gradient(180deg, rgba(38,32,26,0.05) 0%, rgba(38,32,26,0.55) 100%), url(/images/crudo-painted-swoosh.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      {/* HERO — 15-photo mosaic collage (food + art), name, title, two doors */}
+      <section style={{ position: "relative" }}>
+        <CollageHero />
         <div
           className="container"
-          style={{ paddingBottom: "clamp(2.5rem, 6vw, 5rem)", color: "var(--cream)" }}
+          style={{
+            position: "absolute",
+            left: "50%",
+            bottom: 0,
+            transform: "translateX(-50%)",
+            width: "100%",
+            paddingBottom: "clamp(2.5rem, 6vw, 5rem)",
+            color: "var(--cream)",
+          }}
         >
           <h1 style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)", color: "var(--cream)" }}>
             Michael Ballash
