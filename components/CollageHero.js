@@ -79,15 +79,16 @@ export default function CollageHero() {
           }
         }
 
-        /* Mobile: fewer still, show first 9 tiles only, shorter hero */
+        /* Mobile: 2x2 grid of the first 4 tiles only — bigger, less cropped */
         @media (max-width: 600px) {
           .collage-hero {
             min-height: 62vh;
           }
           .collage-grid {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
           }
+          .tile-5, .tile-6, .tile-7, .tile-8, .tile-9,
           .tile-10, .tile-11, .tile-12 {
             display: none;
           }
